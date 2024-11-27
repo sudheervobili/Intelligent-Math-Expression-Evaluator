@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 255 255 255;
+		--foreground: 15 23 42;
+		--card: 245 245 250;
+		--border: 229 231 235;
+		--button-bg: 56 189 248;
+		--button-text: 255 255 255;
+		--hover-bg: 37 99 235;
+		--radius: 0.75rem;
+	}
+
+	.dark {
+		--background: 15 23 42;
+		--foreground: 245 245 250;
+		--card: 22 27 34;
+		--border: 59 62 72;
+		--button-bg: 96 165 250;
+		--button-text: 255 255 255;
+		--hover-bg: 59 130 246;
+	}
+}
+
+body {
+	@apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))] font-sans;
+}
+
+.card {
+	@apply bg-[rgb(var(--card))] p-6 rounded-lg shadow-md border border-[rgb(var(--border))];
+}
+
+.button {
+	@apply px-4 py-2 bg-[rgb(var(--button-bg))] text-[rgb(var(--button-text))] rounded hover:bg-[rgb(var(--hover-bg))] transition-all;
+}

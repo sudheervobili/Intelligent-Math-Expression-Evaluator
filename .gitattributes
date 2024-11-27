@@ -1,0 +1,2 @@
+# Normalize TypeScript files to LF
+*.ts text eol=lf
